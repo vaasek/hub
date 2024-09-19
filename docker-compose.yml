@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  arena_delivery_front_admin:
+    image: arena_delivery_front_admin
+    container_name: arena_delivery_front_admin
+    tty: true
+    restart: always
+    stdin_open: true
+    ports:
+      - "4012:3000"
+    build:
+      context: .
+      dockerfile: Dockerfile
